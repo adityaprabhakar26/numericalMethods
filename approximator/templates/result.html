@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .center {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            margin: 10px 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            text-align: left;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <p>Using the</p> <h1>{{method}}</h1> <p>method, we can approximate the answer to be</p>
+        <h1>{{approximation}}</h1>
+        <table>{{processH | safe}}</table>
+        <a href="{% url 'index' %}">Go Back</a>
+    </div>
+</body>
+</html>

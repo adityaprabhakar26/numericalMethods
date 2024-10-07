@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .center {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            margin: 10px 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        select, input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 12px 20px;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>Numerical Methods Calculator</h1>
+        <form action="result">
+            <label for="method">Choose a method:</label>
+            <select name="method" id="method">
+                <option value="Euler">Euler</option>
+                <option value="Improved Euler">Improved Euler</option>
+                <option value="Runge-Kutta">Runge-Kutta</option>
+            </select>
+            
+            <p>Enter Function:</p>
+            <label for="functionStr">y' = </label>
+            <input type="text" name="functionStr" id="functionStr">
+            
+            <p>Enter Initial Value</p>
+            <label for="yInit">y(0) = </label>
+            <input type="text" name="yInit" id="yInit">
+            
+            <p>Enter Step Value</p>
+            <label for="hStep">h = </label>
+            <input type="text" name="hStep" id="hStep">
+            
+            <p>Enter Final t Value</p>
+            <label for="tVal">t = </label>
+            <input type="text" name="tVal" id="tVal">
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
